@@ -4,24 +4,21 @@ import projects from '../data/projects.js';
 function Projects() {
     function mapProjects(projects) {
         return projects.map((project) => 
-        <div key={project}>
-            <li>
+            <li key={project}>
                 <h2>Name: {project.name}</h2>
                 <p>ID: {project.id}</p>
                 <img src={project.image} alt="Project Image" />
                 <p>{project.description}</p>
                 <a href={project.url}>{project.url}</a>
             </li>
-        </div>
         )
     }
     return (
         <>
-        <h1>Testing la ruta de projects</h1>
-        <div>
+        <h1>My projects</h1>
+        <ul>
             {mapProjects(projects)}
-        </div>
-  
+        </ul>
         </>
     )
 }
